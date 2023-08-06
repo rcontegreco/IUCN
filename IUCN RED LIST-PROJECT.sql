@@ -1,3 +1,6 @@
+-- The IUCN (International Union for Conservation of Nature) is an inventory of biological species' global conservation status and extinction risk.
+-- all the data below are sourced from https://www.iucnredlist.org/
+
 CREATE DATABASE IUCN_RED_LIST;
 USE IUCN_RED_LIST;
 
@@ -179,8 +182,8 @@ VALUES
 SELECT * FROM threat;
 
 --QUERIES
---(Using any type of the joins create a view that combines multiple tables in a logical way)
---Select all species,that are critically endangered. Show their kingdon,phylum and where they are found. Lastly order them in alphabetic order by species name.
+--(Using any type of join, create a view that combines multiple tables in a logical way)
+--Select all species, that are critically endangered. Show their kingdom, phylum and where they are found. Lastly, order them in alphabetic order by species name.
 
 SELECT
 s.name AS species_name,
@@ -207,7 +210,7 @@ GROUP BY threat_id
 ORDER BY repetition_count DESC
 LIMIT 1;
 
---Now, find out which one is threath_id 2.
+-- Now, could you find out which one is threat_id 2?
 SELECT * 
 FROM threat_description 
 WHERE threat_id='2';
